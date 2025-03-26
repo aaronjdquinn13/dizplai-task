@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-    <!-- Render the VotingPage component here -->
-    <VotingPage />
+    <router-view></router-view> <!-- This is where the route components will be displayed -->
   </div>
 </template>
 
 <script>
-import VotingPage from './components/VotingPage.vue'
-
 export default {
   name: 'App',
-  components: {
-    VotingPage
-  }
-}
+};
 </script>
 
 <style>

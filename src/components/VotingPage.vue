@@ -32,18 +32,25 @@
     methods: {
       submitVote() {
         if (this.vote && this.name) {
-          // Use the new modular API to add the vote to the Firestore collection
+          console.log("Submitting vote", this.vote, this.name);
+  
+          // Add the vote to Firestore
           addDoc(collection(db, 'votes'), {
             name: this.name,
             vote: this.vote,
             timestamp: serverTimestamp(),  // Use serverTimestamp for the timestamp
           })
           .then(() => {
+            console.log("Vote submitted successfully!");
+  
+            // Navigate to the confirmation page after successful submission
             this.$router.push('/confirmation');
           })
           .catch((error) => {
             console.error("Error saving vote:", error);
           });
+        } else {
+          console.log("Please fill in all fields before submitting.");
         }
       },
     },

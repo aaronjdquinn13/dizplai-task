@@ -1,6 +1,6 @@
 // Import necessary functions from Firebase SDK v9
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore"; // Use the new modular imports
+import { getFirestore, collection, addDoc, serverTimestamp, getDocs } from "firebase/firestore"; // Use the new modular imports
 
 // Firebase configuration (use your own credentials here)
 const firebaseConfig = {
@@ -18,4 +18,4 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app); // Get Firestore instance
 
 // Export the Firestore instance
-export { db, collection, addDoc, serverTimestamp };
+export { db, collection, addDoc, serverTimestamp, getDocs };

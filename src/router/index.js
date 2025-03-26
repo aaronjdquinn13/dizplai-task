@@ -1,21 +1,23 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import VotingPage from '@/components/VotingPage.vue'
-import ConfirmationPage from '@/components/ConfirmationPage.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import VotingPage from '../components/VotingPage.vue';
+import ConfirmationPage from '../components/ConfirmationPage.vue';
 
-Vue.use(Router)
+const routes = [
+  {
+    path: '/',
+    name: 'Home',
+    component: VotingPage,  // This will be the default route
+  },
+  {
+    path: '/confirmation',
+    name: 'Confirmation',
+    component: ConfirmationPage,  // This will show the confirmation page
+  },
+];
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'VotingPage',
-      component: VotingPage
-    },
-    {
-      path: '/confirmation',
-      name: 'ConfirmationPage',
-      component: ConfirmationPage
-    }
-  ]
-})
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
+
+export default router;
