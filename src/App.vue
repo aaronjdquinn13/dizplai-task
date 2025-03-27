@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view> <!-- This is where the route components will be displayed -->
+    <router-view></router-view> <!-- This is where the router components are displayed -->
   </div>
 </template>
 
@@ -8,15 +8,5 @@
 export default {
   name: 'App',
 };
+import './components/style.css';
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

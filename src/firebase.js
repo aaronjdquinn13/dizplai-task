@@ -1,8 +1,10 @@
-// Import necessary functions from Firebase SDK v9
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, serverTimestamp, getDocs } from "firebase/firestore"; // Use the new modular imports
 
-// Firebase configuration (use your own credentials here)
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, addDoc, serverTimestamp, getDocs } from "firebase/firestore"; // importing what I need from firebase
+
+// Can also add authenciation from firebase for login making the poll more secure 
+
+// Firebase details
 const firebaseConfig = {
   apiKey: "AIzaSyAt2NLj8XhQipX7aKZrCEGCKcKzYoYdRjA",
   authDomain: "dizplai-ef901.firebaseapp.com",

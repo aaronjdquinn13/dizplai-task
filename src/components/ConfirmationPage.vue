@@ -1,14 +1,25 @@
-<!-- src/components/Confirmation.vue -->
+
 <template>
-    <div class="container">
-      <h1>Thank you for voting!</h1>
-      <div v-if="results">
-        <p><strong>Sunny:</strong> {{ results.sunnyVotes }} votes ({{ results.sunnyPercentage }}%)</p>
-        <p><strong>Raining:</strong> {{ results.rainingVotes }} votes ({{ results.rainingPercentage }}%)</p>
+  <div class="container">   
+    <h1>Thank you for voting!</h1>   
+    <div v-if="results" class="results-container">
+      <div class="result-box sunny-box">
+        <strong>Sunny:</strong> 
+        <div class="percentage">{{ results.sunnyPercentage }}%</div>
       </div>
-      <button @click="goBack">Vote Again</button>
+      <div class="result-box raining-box">
+        <strong>Raining:</strong> 
+        <div class="percentage">{{ results.rainingPercentage }}%</div>
+      </div>
     </div>
-  </template>
+  </div>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+</template>
+
+  
   
   <script>
   import { db, collection, getDocs } from '../firebase';  // Updated import
@@ -32,7 +43,7 @@
           let sunnyVotes = 0;
           let rainingVotes = 0;
   
-          querySnapshot.forEach((doc) => {
+          querySnapshot.forEach((doc) => {   // Added votes for each submission 
             if (doc.data().vote === 'Sunny') {
               sunnyVotes++;
             } else if (doc.data().vote === 'Raining') {
@@ -40,7 +51,7 @@
             }
           });
   
-          const sunnyPercentage = ((sunnyVotes / totalVotes) * 100).toFixed(0);
+          const sunnyPercentage = ((sunnyVotes / totalVotes) * 100).toFixed(0);  // Gets the percantages for the votes with no decimal places 
           const rainingPercentage = ((rainingVotes / totalVotes) * 100).toFixed(0);
   
           this.results = {
@@ -59,24 +70,3 @@
     },
   };
   </script>
-  
-  <!-- <style scoped>
-  /* Your styles here (same as previous) */
-  /* </style> */ -->
-
-  <!-- <template>
-    <div class="container">
-      <h1>Thank you for your submission!</h1>
-      <p>Your vote has been recorded.</p>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'ConfirmationPage',
-  };
-  </script> -->
-  
-  <style scoped>
-  /* Add any styles for your confirmation page here */
-  </style>

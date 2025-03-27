@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './router'; // import your router
+import router from './router'; // imports the router
 
 const app = createApp(App);
-app.use(router);  // make sure you use the router in your app
+app.use(router);  // uses the roter in App.vue
 app.mount('#app');

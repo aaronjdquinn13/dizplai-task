@@ -1,0 +1,238 @@
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: 'Outfit', sans-serif; /* Using Outfit font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+/* Container to center everything on the page */
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff; /* White background for the box */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow around the box */
+  border: 1px solid #8C8C8C; /* Grey border for the container */
+}
+
+.error-message {
+  color: red; /* red to show error message */
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8d7da; 
+  border: 1px solid #f5c6cb; 
+  border-radius: 5px;
+}
+
+
+h1 {
+  text-align: center;
+  color: #996BF9; 
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Style the radio buttons */
+input[type="radio"] {
+  display: none; 
+}
+
+/* Style the custom radio box container */
+.radio-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px; 
+  margin: 8px 0; 
+  border: 2px solid #8C8C8C; 
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;   /* Tried to make the box small so that the colour was covering the whole box */
+  text-align: center;
+  font-size: 16px; 
+  font-weight: bold;
+  background-color: #fff; 
+  width: 80%; 
+  max-width: 400px; 
+  margin-left: auto;
+  margin-right: auto; /* Center the box horizontally */
+}
+
+/* When Sunny is selected, light yellow  */
+input[type="radio"]#sunny:checked + label {
+  background-color: #fff8e1; 
+  border-color: #996BF9; 
+}
+
+/* When Raining is selected, light blue */
+input[type="radio"]#raining:checked + label {
+  background-color: #e3f2fd; 
+  border-color: #42a5f5; 
+}
+
+
+.radio-option:hover {
+  background-color: #f1f1f1; /* Light grey on hover */
+  border-color: #8C8C8C; 
+}
+
+label {
+  cursor: pointer;
+  display: block; 
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Style the text input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #8C8C8C; /* Grey border for input */
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  background-color: #28a745; /* Green for submit */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+
+.results p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+
+.results-container {
+  display: flex;
+  flex-direction: column; /* Stack the result boxes vertically */
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px; /* Space between the result boxes */
+}
+
+/* Styling for each result box */
+.result-box {
+  width: 87%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #8C8C8C; /* Light grey border for each result box */
+}
+
+.sunny-box {
+  background-color: #fff8e1; /* Light yellow for Sunny */
+}
+
+.raining-box {
+  background-color: #e3f2fd; /* Light blue for Raining */
+}
+
+/* Styling for the percentage inside the boxes */
+.percentage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+  background-color: #f1f1f1; /* Light grey background for the percentage box */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Strong text for results section titles */
+.result-box strong {
+  color: #996BF9; /* Purple color for strong text */
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style the "Thank you for voting" header */
+h1 {
+  text-align: center;
+  color: #28a745; /* Green for success */
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Add padding and spacing for the page */
+.container {
+  padding: 30px;
+  background-color: #ffffff; /* White background for results page */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #8C8C8C; /* Grey border */
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+
+form label {
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+/* Make results section more readable */
+.results {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Apply some spacing between results and container edges */
+.results p {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design: Ensure the form looks good on smaller screens. This makes sure it works both on Mobile and desktop devices */
+@media (max-width: 576px) {
+  .results-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-box {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+  }
+}

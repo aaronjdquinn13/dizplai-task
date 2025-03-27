@@ -6,7 +6,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: VotingPage,  // This will be the default route
+    component: VotingPage,  // This will show the main voting page
   },
   {
     path: '/confirmation',
