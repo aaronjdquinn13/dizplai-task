@@ -24,7 +24,7 @@ For security reason the poll can introduce a login page and simply use firebase 
 
 # Tools 
 
-I used nod.js and vue.js for the website, and firebase for the database. 
+I used vue.js for the website, and firebase for the database. 
 
 I also used SuperTest and Jest for testing as was simply to install and run 
 
