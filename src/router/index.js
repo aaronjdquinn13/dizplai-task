@@ -1,3 +1,4 @@
+// using a router to easily switch between pages 
 import { createRouter, createWebHistory } from 'vue-router';
 import VotingPage from '../components/VotingPage.vue';
 import ConfirmationPage from '../components/ConfirmationPage.vue';

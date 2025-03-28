@@ -1,4 +1,4 @@
-
+// This is used for the server.test.js file 
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');

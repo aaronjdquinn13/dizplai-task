@@ -1,3 +1,5 @@
+// calls the server.js file 
+// test to see if submitting a vote is succesful 
 const request = require('supertest');
 const app = require('../server'); 
 

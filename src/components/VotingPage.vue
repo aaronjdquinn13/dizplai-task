@@ -2,13 +2,13 @@
   <div class="container">
     <h1>What will the weather be like in Manchester tomorrow?</h1>
     <form @submit.prevent="submitVote">
-      <!-- Sunny Option -->
+      <!-- Sunny  -->
       <div class="radio-option">
         <input type="radio" id="sunny" value="Sunny" v-model="vote" required />
         <label for="sunny" class="sunny">Sunny</label>
       </div>
 
-      <!-- Raining Option -->
+      <!-- Raining -->
       <div class="radio-option">
         <input type="radio" id="raining" value="Raining" v-model="vote" required />
         <label for="raining" class="raining">Raining</label>
@@ -25,6 +25,10 @@
       <button type="submit">Submit</button>
     </form>
   </div>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
 </template>
 
 <script>

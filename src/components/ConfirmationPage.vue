@@ -22,7 +22,7 @@
   
   
   <script>
-  import { db, collection, getDocs } from '../firebase';  // Updated import
+  import { db, collection, getDocs } from '../firebase';  // import relevant information from firebase 
   
   export default {
     data() {
@@ -36,8 +36,8 @@
     methods: {
       async fetchResults() {
         try {
-          const votesCollection = collection(db, 'votes');  // Reference to the 'votes' collection
-          const querySnapshot = await getDocs(votesCollection);  // Get all documents in the 'votes' collection
+          const votesCollection = collection(db, 'votes');  // Reference to the votes collection
+          const querySnapshot = await getDocs(votesCollection);  // Get all documents in the votes collection
           
           const totalVotes = querySnapshot.size;
           let sunnyVotes = 0;
